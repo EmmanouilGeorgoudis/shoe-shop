@@ -25,11 +25,11 @@ enhancements and graphical representations of the data.
 1. Copy `Settings.example.properties` and rename it to `Settings.properties`.
 
 2. Fill in your database username and password.
-   > ⚠️ Do **not** use real personal passwords.
+   > Do **not** use real personal passwords.
 
 3. In the `Settings.properties` file, set the JDBC URL as follows:
    
-   jdbc:mysql://localhost:3306/shoeShop?serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true
+   ```jdbc:mysql://localhost:3306/shoeShop?serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true```
 
 4. Run the SQL scripts in `/database` in the following order:
    - `schema.sql`
@@ -49,5 +49,6 @@ GRANT ALL PRIVILEGES ON shoeshop.* TO 'your_username'@'localhost';
 7. You can now use the pre-stored example account in the database:
 * Username: Manolis Manolides
 * Password: ManoPass
+
 Check the Customer table for additional fake usernames and passwords.
-⚠️ This account is for testing purposes only. Do not use real personal passwords.
+This account is for testing purposes only. Do not use real personal passwords.
