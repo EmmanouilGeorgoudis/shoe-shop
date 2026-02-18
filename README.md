@@ -26,7 +26,7 @@ enhancements and graphical representations of the data.
 3. Run the SQL scripts in `/database` in order:
     - `schema.sql`
     - `data.sql`
-    - Stored procedures
+    - `stored_procedures.sql`
 4. Read "Tips for Quick Login". Your username and password have to match those in Settings.properties
 5. Open the project in IntelliJ and run the application.
 
