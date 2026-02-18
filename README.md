@@ -21,20 +21,33 @@ enhancements and graphical representations of the data.
 - JDBC
 
 ## Setup Instructions
-1. Copy `Settings.example.properties` and rename to `Settings.properties`.
-2. Fill in your database URL, username, and password.
-3. Run the SQL scripts in `/database` in order:
-    - `schema.sql`
-    - `data.sql`
-    - `stored_procedures.sql`
-4. Read "Tips for Quick Login". Your username and password have to match those in Settings.properties
-5. Open the project in IntelliJ and run the application.
 
-## Tips for Quick Login
-If you want to quickly create a MySQL user to test the application,
-you can run the following **example** SQL commands:
+1. Copy `Settings.example.properties` and rename it to `Settings.properties`.
+
+2. Fill in your database username and password.
+   > ⚠️ Do **not** use real personal passwords.
+
+3. In the `Settings.properties` file, set the JDBC URL as follows:
+   
+   jdbc:mysql://localhost:3306/shoeShop?serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true
+
+4. Run the SQL scripts in `/database` in the following order:
+   - `schema.sql`
+   - `data.sql`
+   - `stored_procedures.sql`
+
+5. For quick login, you can create a test user in MySQL (these credentials must match those in `Settings.properties`):
 
 ```sql
 -- Replace 'your_username' and 'your_password' with your own credentials
 CREATE USER 'your_username'@'localhost' IDENTIFIED BY 'your_password';
 GRANT ALL PRIVILEGES ON shoeshop.* TO 'your_username'@'localhost';
+```
+
+6. Open the project in IntelliJ and run the application.
+
+7. You can now use the pre-stored example account in the database:
+* Username: Manolis Manolides
+* Password: ManoPass
+Check the Customer table for additional fake usernames and passwords.
+⚠️ This account is for testing purposes only. Do not use real personal passwords.
